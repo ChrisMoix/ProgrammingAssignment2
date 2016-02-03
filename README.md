@@ -1,3 +1,27 @@
+### Usage
+> source("cachematrix.R")
+> r <- c(2, 2, 3, 2)
+> my_matrix <- makeCacheMatrix(matrix(r, 2, 2))
+> my_matrix$get()
+     [,1] [,2]
+[1,]    2    3
+[2,]    2    2
+> my_matrix$getInverse()
+NULL
+> cacheSolve(my_matrix)
+     [,1] [,2]
+[1,]   -1  1.5
+[2,]    1 -1.0
+> my_matrix$getInverse()
+     [,1] [,2]
+[1,]   -1  1.5
+[2,]    1 -1.0
+> cacheSolve(my_matrix)
+getting cached data
+     [,1] [,2]
+[1,]   -1  1.5
+[2,]    1 -1.0
+
 ### Introduction
 
 This second programming assignment will require you to write an R
